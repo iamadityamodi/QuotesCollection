@@ -2,14 +2,14 @@ package com.example.all.status.quotescollection.models;
 
 public class QuotesxCollectionModel {
 
-    public static String Name;
+    private String Name;
 
+    public QuotesxCollectionModel(String name) {
+        Name = name;
+    }
 
     public String getName() {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
 }

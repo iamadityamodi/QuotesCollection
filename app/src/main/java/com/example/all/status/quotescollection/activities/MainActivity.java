@@ -48,16 +48,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-
         for (int i = 0; i < name.length; i++) {
-            QuotesxCollectionModel quotesxCollectionModel = new QuotesxCollectionModel();
-            Log.e("namename", "onCreate1: "+name[i] );
-            quotesxCollectionModel.setName(name[i]);
-            quotesxCollectionModels.add(quotesxCollectionModel);
+            quotesxCollectionModels.add(new QuotesxCollectionModel(name[i]));
         }
         quotesCollectionAdapter = new QuotesCollectionAdapter(this, quotesxCollectionModels);
         recyclerView.setAdapter(quotesCollectionAdapter);
-        Log.e("namename", "onCreate: "+quotesxCollectionModels.get(0).getName()+" last "+quotesxCollectionModels.get(quotesxCollectionModels.size()-1).getName());
+        Log.e("namename", "onCreate: " + quotesxCollectionModels.get(0).getName() + " last " + quotesxCollectionModels.get(quotesxCollectionModels.size() - 1).getName());
       /*  for (int i = 0; i < name.length; i++) {
 
             Log.e("NAMENAME", "onCreate: "+name.length );
