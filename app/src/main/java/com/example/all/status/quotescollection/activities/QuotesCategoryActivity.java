@@ -38,7 +38,6 @@ public class QuotesCategoryActivity extends AppCompatActivity {
     Button btn;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,13 +117,11 @@ public class QuotesCategoryActivity extends AppCompatActivity {
                 JSONArray contacts = new JSONArray(loadJSONFromAsset());
                 quotesxCollectionModels = new ArrayList<>();
                 for (int i = 0; i < contacts.length(); i++) {
-                    QuotesxCollectionModel quotesxCollectionModel = new QuotesxCollectionModel();
                     JSONObject c = contacts.getJSONObject(i);
 
                     String quotes = c.getString("author");
                     Log.e("quotesquotes", "doInBackground: " + quotes);
-                    quotesxCollectionModel.setName(quotes);
-                    quotesxCollectionModels.add(quotesxCollectionModel);
+                    quotesxCollectionModels.add(new QuotesxCollectionModel(quotes));
                 }
 
 
