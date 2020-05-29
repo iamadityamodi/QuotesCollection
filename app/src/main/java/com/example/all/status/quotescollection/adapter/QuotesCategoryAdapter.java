@@ -19,52 +19,41 @@ import com.example.all.status.quotescollection.models.QuotesxCollectionModel;
 
 import java.util.ArrayList;
 
-public class QuotesCollectionAdapter extends RecyclerView.Adapter<QuotesCollectionAdapter.ViewHolder> {
+public class QuotesCategoryAdapter extends RecyclerView.Adapter<QuotesCategoryAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<QuotesxCollectionModel> quotesxCollectionModels;
+    ArrayList<String> name;
 
-
-    public QuotesCollectionAdapter(Context context, ArrayList<QuotesxCollectionModel> quotesxCollectionModels) {
+    public QuotesCategoryAdapter(Context context, ArrayList<String> name) {
         this.context = context;
-        this.quotesxCollectionModels = quotesxCollectionModels;
-
-
+        this.name = name;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(context).inflate(R.layout.quotescollectiomnmain, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Log.e("namename", "onBindViewHolder: " + position);
 
-        QuotesxCollectionModel quotesxCollectionModel = quotesxCollectionModels.get(position);
-        holder.textView.setText(quotesxCollectionModel.getQuotes());
-        holder.relativetext.setAlpha(0.9f);
-        Glide.with(context)
-                .load(quotesxCollectionModel.getImage())
-                .into(holder.imageviewmain);
 
-       /* Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        holder.relativetext.setBackgroundColor(color);*/
+        holder.textView.setText(name.get(position));
+        holder.relativetext.setAlpha(0.9f);
+
 
     }
 
     @Override
     public int getItemCount() {
-        return quotesxCollectionModels.size();
+        return name.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         TextView textView;
         CardView cardView;
         ImageView imageviewmain;

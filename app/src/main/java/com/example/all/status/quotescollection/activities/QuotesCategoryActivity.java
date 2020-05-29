@@ -34,9 +34,13 @@ public class QuotesCategoryActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
+    ArrayList<String> jsonnamelist;
+
 
     Button btn;
-
+    int pos;
+    QuotesCollectionAdapter quotesCollectionAdapter;
+    ArrayList<QuotesxCollectionModel> quotesxCollectionModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,28 @@ public class QuotesCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quotes_category);
 
         int numberOfColumns = 2;
+
+
+        pos = getIntent().getIntExtra("POS", 0);
+
+        jsonnamelist = new ArrayList<>();
+        jsonnamelist.add(getResources().getResourceName(R.raw.change));
+        jsonnamelist.add(getResources().getResourceName(R.raw.death));
+        jsonnamelist.add(getResources().getResourceName(R.raw.dream));
+        jsonnamelist.add(getResources().getResourceName(R.raw.family));
+        jsonnamelist.add(getResources().getResourceName(R.raw.famous));
+        jsonnamelist.add(getResources().getResourceName(R.raw.friendship));
+        jsonnamelist.add(getResources().getResourceName(R.raw.happiness));
+        jsonnamelist.add(getResources().getResourceName(R.raw.inspirational));
+        jsonnamelist.add(getResources().getResourceName(R.raw.life));
+        jsonnamelist.add(getResources().getResourceName(R.raw.love));
+        jsonnamelist.add(getResources().getResourceName(R.raw.motivational));
+        jsonnamelist.add(getResources().getResourceName(R.raw.moveon));
+        jsonnamelist.add(getResources().getResourceName(R.raw.nature));
+        jsonnamelist.add(getResources().getResourceName(R.raw.strength));
+        jsonnamelist.add(getResources().getResourceName(R.raw.travel));
+
+
         new GetContacts().execute();
 
 
@@ -105,9 +131,6 @@ public class QuotesCategoryActivity extends AppCompatActivity {
 
     private class GetContacts extends AsyncTask<Void, Void, Void> {
 
-        QuotesCollectionAdapter quotesCollectionAdapter;
-        ArrayList<QuotesxCollectionModel> quotesxCollectionModels;
-
 
         @Override
         protected Void doInBackground(Void... voids) {
@@ -115,13 +138,15 @@ public class QuotesCategoryActivity extends AppCompatActivity {
             try {
 
                 JSONArray contacts = new JSONArray(loadJSONFromAsset());
+
                 quotesxCollectionModels = new ArrayList<>();
                 for (int i = 0; i < contacts.length(); i++) {
                     JSONObject c = contacts.getJSONObject(i);
 
-                    String quotes = c.getString("author");
+                    String quotes = c.getString("quote");
+                    String author = c.getString("author");
                     Log.e("quotesquotes", "doInBackground: " + quotes);
-                    quotesxCollectionModels.add(new QuotesxCollectionModel(quotes));
+                    quotesxCollectionModels.add(new QuotesxCollectionModel(quotes, 0, null));
                 }
 
 
@@ -146,17 +171,19 @@ public class QuotesCategoryActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-          /*  recyclerView = findViewById(R.id.recyclerviewcategory);
+            recyclerView = findViewById(R.id.recyclerviewcategory);
             LinearLayoutManager llm = new LinearLayoutManager(QuotesCategoryActivity.this);
             llm.setOrientation(LinearLayoutManager.VERTICAL);
             recyclerView.setLayoutManager(llm);
             quotesCollectionAdapter = new QuotesCollectionAdapter(QuotesCategoryActivity.this, quotesxCollectionModels);
-            recyclerView.setAdapter(quotesCollectionAdapter);*/
+            recyclerView.setAdapter(quotesCollectionAdapter);
         }
     }
 
 
     public String loadJSONFromAsset() {
+
+
         String json = null;
         try {
             InputStream is = getAssets().open("change.json");
@@ -171,4 +198,6 @@ public class QuotesCategoryActivity extends AppCompatActivity {
         }
         return json;
     }
+
+
 }

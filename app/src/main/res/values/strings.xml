@@ -8,6 +8,7 @@
 
     <string name="nav_home">Rating</string>
     <string name="nav_photos">Share App</string>
+    <string name="titlename">QUOTES COLLECTION</string>
 
     <string-array name="nav_item_activity_titles">
         <item>Rating</item>
