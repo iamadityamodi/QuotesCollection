@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="7dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_heart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/GetQuotedata"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/bottom_linear">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="#CE595353" />
+
+                    <TextView
+
+                        android:id="@+id/GetAuthotdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="Author"
+                        android:textColor="#CE595353"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/GetQuotedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="12dp"
+                    android:gravity="center"
+                    android:text="Quotes"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/bottom_linear"
+                    app:layout_constraintTop_toBottomOf="@id/favorite"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/bottom_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/sharetoanother"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_share_black_24dp"
+                            android:tint="#000" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/editdata"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="7dp"
+                            android:src="@drawable/edit"
+                            android:tint="#000" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1">
+
+
+                        <ImageView
+                            android:id="@+id/copydata"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_content_copy_black_24dp"
+                            android:tint="#000" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/bottom_linear"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="?actionBarSize"-->
+                <!--                android:layout_alignParentBottom="true"-->
+                <!--                android:layout_gravity="bottom"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                android:weightSum="3"-->
+                <!--                app:layout_constraintBottom_toBottomOf="parent">-->
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/sharetoanother"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:padding="15dp"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:src="@drawable/ic_share_black_24dp"-->
+                <!--                    android:tint="#000" />-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/editdata"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:padding="15dp"-->
+                <!--                    android:src="@drawable/edit"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:tint="#000" />-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/copydata"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:padding="15dp"-->
+                <!--                    android:src="@drawable/ic_content_copy_black_24dp"-->
+                <!--                    android:tint="#000" />-->
+
+
+                <!--            </LinearLayout>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

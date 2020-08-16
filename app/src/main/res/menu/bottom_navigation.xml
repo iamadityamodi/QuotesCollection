@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/b_n_whatsapp"
+        android:icon="@drawable/ic_whatsapplogo"
+        android:title="Whatsapp" />
+
+    <item
+        android:id="@+id/b_n_fevorite"
+        android:icon="@drawable/ic_heart"
+        android:title="Whatsapp" />
+
+    <item
+        android:id="@+id/b_n_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Share" />
+
+    <item android:id="@+id/b_n_edit"
+        android:icon="@drawable/edit"
+        android:title="Edit"/>
+
+    <item
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:id="@+id/b_n_copy"
+        android:title="Copy" />
+
+</menu>
