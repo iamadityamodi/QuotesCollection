@@ -1,2 +1,2 @@
 rootProject.name='Quotes Collection'
-include ':app'
+include ':app', ':duo-navigation-drawer'

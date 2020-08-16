@@ -1,4 +1,4 @@
-package com.example.all.status.quotescollection.inter;
+package com.quotescollection.quotesdata.inter;
 
 import android.view.View;
 

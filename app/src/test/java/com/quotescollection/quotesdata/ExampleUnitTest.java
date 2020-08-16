@@ -1,4 +1,4 @@
-package com.example.all.status.quotescollection;
+package com.quotescollection.quotesdata;
 
 import org.junit.Test;
 

@@ -5,28 +5,55 @@
     android:id="@+id/Main_Activity_Toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorPrimary"
+    android:background="@android:color/white"
     android:gravity="center_vertical"
+    app:contentInsetStart="0dp"
     app:layout_collapseMode="pin"
     app:layout_scrollFlags="scroll|enterAlways"
     app:theme="@style/AppTheme">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backimageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:gravity="center"
-            android:text="@string/titlename"
-            android:textColor="#fff"
+            android:text="Category"
+            android:textColor="#000"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+<!--        <ImageView-->
+<!--            android:visibility="gone"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:id="@+id/menuimageview"-->
+<!--            android:padding="@dimen/_15sdp"-->
+<!--            android:src="@drawable/ic_menu"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_width="@dimen/_48sdp"-->
+<!--            android:layout_height="match_parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.Toolbar>

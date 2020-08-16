@@ -1,17 +1,95 @@
 <resources>
-    <string name="app_name">Quotes Collection</string>
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Favorite</item>
+        <item>Saved Quotes</item>
+        <item>Share App</item>
+        <item>Rate Us</item>
+        <item>Privacy Policy</item>
+    </array>
 
+    <integer-array name="colorname">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+        <item>@color/color5</item>
+        <item>@color/color6</item>
+        <item>@color/color7</item>
+        <item>@color/color8</item>
+        <item>@color/color9</item>
+        <item>@color/color10</item>
+        <item>@color/color11</item>
+        <item>@color/color12</item>
+        <item>@color/color13</item>
+        <item>@color/color14</item>
+        <item>@color/color15</item>
+    </integer-array>
+    <string name="app_name">Quotes Collection</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
-
     <string name="nav_home">Rating</string>
     <string name="nav_photos">Share App</string>
     <string name="titlename">QUOTES COLLECTION</string>
+    <string name="Cat_Name">Cat_Name</string>
+    <string name="Cat_Qutes">Cat_Qutes</string>
+    <string name="Cat_Autor">Cat_Autor</string>
+
+    <string name="share_subject">Quotes And Author</string>
+
+    <string name="share_using">Share Quotes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="later">Later</string>
+    <string name="No">No,thanks</string>
+    <string name="Rate_us">Rate now</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="color_pass">Color_pass</string>
 
     <string-array name="nav_item_activity_titles">
         <item>Rating</item>
         <item>Share App</item>
     </string-array>
+
+
+    <string-array name="Name">
+
+        <item>Change</item>
+        <item>Death</item>
+        <item>Dream</item>
+        <item>Family</item>
+        <item>Famous</item>
+
+        <item>Friendship</item>
+        <item>Happiness</item>
+        <item>Inspirational</item>
+        <item>Life</item>
+        <item>Love</item>
+
+        <item>Motivational</item>
+        <item>MoveOn</item>
+        <item>Nature</item>
+        <item>Strength</item>
+        <item>Travel</item>
+
+    </string-array>
+
+    <integer-array name="color_array">
+        <item>@color/colo1</item>
+        <item>@color/colo2</item>
+        <item>@color/colo3</item>
+        <item>@color/colo4</item>
+        <item>@color/colo5</item>
+        <item>@color/colo6</item>
+        <item>@color/colo7</item>
+        <item>@color/colo8</item>
+        <item>@color/colo9</item>
+        <item>@color/colo10</item>
+        <item>@color/colo11</item>
+        <item>@color/colo12</item>
+    </integer-array>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.all.status.quotescollection.others;
+package com.quotescollection.quotesdata.others;
 
 import android.content.Context;
 import android.view.GestureDetector;
@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.all.status.quotescollection.inter.RecyclerViewClickListener;
+import com.quotescollection.quotesdata.inter.RecyclerViewClickListener;
 
 
 public class RecyclerViewTouchListener implements RecyclerView.OnItemTouchListener {

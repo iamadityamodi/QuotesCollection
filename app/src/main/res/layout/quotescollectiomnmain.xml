@@ -1,39 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardviewmain"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_margin="4dp"
+    android:layout_height="wrap_content"
+   app:cardUseCompatPadding="true"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp">
 
 
-    <ImageView
-        android:id="@+id/imageviewmain"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@color/colorPrimary" />
-
-    <RelativeLayout
-        android:id="@+id/relativetext"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="?attr/selectableItemBackground"
+        android:layout_height="wrap_content">
 
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/textviewname"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:text="name"
+            android:textColor="#000"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageviewmain" />
 
-    <TextView
-        android:id="@+id/textviewname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:text="name"
-        android:textColor="#972929"
-        android:textSize="27sp"
-        android:textStyle="bold" />
+        <RelativeLayout
+            android:background="@drawable/roundshape"
+            android:id="@+id/imageviewmain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:textSize="32sp"
+                android:gravity="center"
+                android:text="A"
+                android:id="@+id/firstlatter"
+                android:layout_centerInParent="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
